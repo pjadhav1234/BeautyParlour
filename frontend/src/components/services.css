@@ -1,0 +1,161 @@
+/* General */
+.beauty-services-enhanced {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Services */
+.services-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgb(240, 231, 230);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #800000;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 80%; /* card takes full height */
+}
+
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.service-img-wrapper {
+  flex: 0 0 60%; /* 80% of card height */
+  overflow: hidden;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* maintain aspect ratio while filling */
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.1);
+}
+
+.service-content {
+  padding: 20px;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.service-content p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+
+/* Parallax Divider */
+.parallax-divider {
+  background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1500&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-divider .overlay {
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.parallax-divider h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Treatments */
+.treatments-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #fff7fa, #ffe6f0);
+}
+
+.treatments-left {
+  flex: 1;
+}
+
+.treatments-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.treatments-right {
+  flex: 1;
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #333;
+}
+
+.pricing-list li {
+  margin-bottom: 10px;
+}
+
+.view-all {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #e91e63;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .treatments-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
