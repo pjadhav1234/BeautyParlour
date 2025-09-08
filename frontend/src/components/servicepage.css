@@ -1,0 +1,159 @@
+/* ===============================
+   PARALLAX SECTIONS
+================================= */
+*{
+    margin: 5px 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+/* Parallax Hero */
+.parallax-hero {
+  background-image: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1500&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Georgia", serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  position: relative;
+  width: 100vw;
+}
+
+.parallax-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Text on Hero */
+.parallax-hero h1 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 1;
+  animation: fadeInDown 1.5s ease;
+}
+
+/* Parallax Divider */
+.parallax-divider {
+  background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1500&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.parallax-divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.parallax-divider span {
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* ===============================
+   SERVICE CARDS
+================================= */
+/* ===============================
+   SERVICE SECTIONS (Alternate Layout)
+================================= */
+.service-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .service-block {
+    flex-direction: row;
+  }
+
+  /* Alternate rows reversed */
+  .service-block:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Service Image */
+.service-block img {
+  flex: 1;                   /* allow it to take space */
+  width: 100%;               /* full width inside column */
+  max-width: 100%;          /* don't shrink too much */
+  height: auto;              /* keep proportions */
+  border-radius: 105px;
+  
+  transition: transform 0.4s ease;
+}
+
+.service-block img:hover {
+  transform: scale(1.05);
+}
+
+/* Service Text */
+.service-block h3 {
+  font-size: 2rem;
+  font-family: "Georgia", serif;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-block li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.service-block li:last-child {
+  border-bottom: none;
+}
+
+/* Book Now Button */
+.service-block button {
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #d4a574, #b88c5c);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(180, 140, 90, 0.4);
+}
+
+.service-block button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(180, 140, 90, 0.55);
+}

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Menu, X, ShoppingCart, Search } from "lucide-react";
 import "./Navbar.css"; // create this CSS file for styling
+import { Link } from "react-router-dom";
+
+
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,11 +20,10 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#cart"><ShoppingCart size={20} /></a></li>
-          <li><a href="#search"><Search size={20} /></a></li>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+          
         </ul>
 
         {/* Mobile Menu Toggle */}
@@ -33,11 +36,10 @@ const Navbar = () => {
       {menuOpen && (
         <ul className="mobile-menu">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#cart"><ShoppingCart size={20} /></a></li>
-          <li><a href="#search"><Search size={20} /></a></li>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+          
         </ul>
       )}
     </nav>
