@@ -19,7 +19,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <ul className="mobile-menu">
-          <li><a href="#home">Home</a></li>
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
