@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, Clock, Heart, Sparkles, ArrowRight, Phone, Calendar } from 'lucide-react';
+import manicure from "../assets/manicure.jpg";
 
 const servicesData = [
   {
@@ -42,7 +43,7 @@ const servicesData = [
     category: "Nail Care",
     description: "Complete nail care and beautification",
     longDescription: "Pamper your hands and feet with our luxurious manicure and pedicure services, including nail art and gel polish options.",
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc16f792?auto=format&fit=crop&w=800&q=80",
+    image: manicure,
     price: "₹600 - ₹1,800",
     duration: "60-90 mins",
     rating: 4.7,
@@ -639,35 +640,40 @@ const EnhancedServicesPage = () => {
                 display: 'flex',
                 gap: '1rem'
               }}>
-                <button
-                  style={{
-                    flex: 1,
-                    padding: '1rem 2rem',
-                    background: 'linear-gradient(135deg, #e91e63, #ad1457)',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '12px',
-                    fontSize: '1.1rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '0.5rem'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = 'translateY(-2px)';
-                    e.target.style.boxShadow = '0 10px 25px rgba(233, 30, 99, 0.4)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = 'none';
-                  }}
-                >
-                  <Phone size={18} />
-                  Call to Book: +91 98765 43210
-                </button>
+                <a
+  href="https://wa.me/+917888155320" 
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    flex: 1,
+    padding: '1rem 2rem',
+    background: 'linear-gradient(135deg, #e91e63, #ad1457)',
+    color: 'white',
+    border: 'none',
+    borderRadius: '12px',
+    fontSize: '1.1rem',
+    fontWeight: 600,
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    textDecoration: 'none'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = 'translateY(-2px)';
+    e.currentTarget.style.boxShadow = '0 10px 25px rgba(233, 30, 99, 0.4)';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = 'translateY(0)';
+    e.currentTarget.style.boxShadow = 'none';
+  }}
+>
+  <Phone size={18} />
+  DM ON : WhatsApp
+</a>
+
               </div>
             </div>
           </div>
@@ -705,56 +711,43 @@ const EnhancedServicesPage = () => {
             justifyContent: 'center',
             flexWrap: 'wrap'
           }}>
-            <button style={{
-              padding: '1rem 2rem',
-              background: 'white',
-              color: '#667eea',
-              border: 'none',
-              borderRadius: '50px',
-              fontSize: '1.1rem',
-              fontWeight: 600,
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-3px)';
-              e.target.style.boxShadow = '0 10px 25px rgba(255,255,255,0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = 'none';
-            }}>
-              <Phone size={20} />
-              Call Now
-            </button>
-            <button style={{
-              padding: '1rem 2rem',
-              background: 'transparent',
-              color: 'white',
-              border: '2px solid white',
-              borderRadius: '50px',
-              fontSize: '1.1rem',
-              fontWeight: 600,
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = 'white';
-              e.target.style.color = '#667eea';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = 'transparent';
-              e.target.style.color = 'white';
-            }}>
-              <Calendar size={20} />
-              Book Online
-            </button>
+           
+            <a
+  href="https://wa.me/+917888155320" 
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    flex: 1,
+    padding: '1rem 2rem',
+    background: 'linear-gradient(135deg, #e91e63, #ad1457)',
+    color: 'white',
+    border: 'none',
+    borderRadius: '12px',
+    fontSize: '1.1rem',
+    fontWeight: 600,
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    textDecoration: 'none'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = 'translateY(-2px)';
+    e.currentTarget.style.boxShadow = '0 10px 25px rgba(233, 30, 99, 0.4)';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = 'translateY(0)';
+    e.currentTarget.style.boxShadow = 'none';
+  }}
+>
+  <Phone size={18} />
+  call us
+</a>
+            
+           
+            
           </div>
         </div>
       </div>

@@ -142,14 +142,14 @@ const ContactUs = () => {
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
-      info: "123 Beauty Street, Mumbai, India",
-      detail: "Near Central Mall, 2nd Floor"
+      info: "Sangamner, Maharashtra 422605",
+      detail: "Maldad Rd, Saidarshan Colony"
     },
     {
       icon: <Phone size={24} />,
       title: "Call Us",
-      info: "+91 98765 43210",
-      detail: "Available 9 AM - 8 PM"
+      info: "+91 7888155320",
+      detail: "Available 10 AM - 8 PM"
     },
     {
       icon: <Mail size={24} />,
@@ -160,7 +160,7 @@ const ContactUs = () => {
     {
       icon: <Clock size={24} />,
       title: "Working Hours",
-      info: "Mon - Sat: 9:00 AM - 8:00 PM",
+      info: "Mon - Sat: 10:00 AM - 8:00 PM",
       detail: "Sunday: 10:00 AM - 6:00 PM"
     }
   ];
@@ -211,7 +211,7 @@ const ContactUs = () => {
             margin: '0 auto',
             lineHeight: 1.6
           }}>
-            Ready to transform your look? Contact us today to book your appointment or ask any questions
+            From glam to glow, we’ve got you covered<br/>reach out today and let’s make magic happen!
           </p>
         </div>
       </div>
@@ -613,8 +613,8 @@ const ContactUs = () => {
                 <MapPin size={48} style={{ color: '#db7093', marginBottom: '16px' }} />
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Find Us Here</h3>
                 <p style={{ textAlign: 'center', color: '#7f8c8d' }}>
-                  Interactive map coming soon!<br />
-                  123 Beauty Street, Mumbai, India
+                  
+                  Maldad Rd, Saidarshan Colony, Sangamner, Maharashtra 422605
                 </p>
               </div>
             </div>

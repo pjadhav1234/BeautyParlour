@@ -7,10 +7,10 @@ const Hero = () => {
     <div className="hero-section">
       <Container>
         <h1 className="display-4 fw-bold">
-          Elegance comes from being as beautiful inside as outside
+          Elegance isn’t just about how you look
         </h1>
         <p className="lead mt-3">
-          Eleifend arcu non lorem justo in tempus purus gravida. Est tortor egestas sed feugiat elementum.
+         it’s about how you feel. At our salon, we believe true beauty shines when confidence and care come together.
         </p>
         
       </Container>

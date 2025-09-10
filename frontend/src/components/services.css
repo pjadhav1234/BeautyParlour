@@ -126,9 +126,10 @@
 }
 
 .treatments-main-img {
-  width: 100%;
+   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
 
@@ -157,10 +158,19 @@
   text-decoration: underline;
 }
 
-/* Responsive */
+/* Responsive Services */
 @media (max-width: 768px) {
   .treatments-wrapper {
     flex-direction: column;
+    padding: 60px 5%;
     text-align: center;
+  }
+
+  .treatments-left, .treatments-right {
+    flex: none;
+    width: 100%;
+  }
+  .treatments-main-img {
+    margin-bottom: 30px;
   }
 }

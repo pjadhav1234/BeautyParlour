@@ -20,10 +20,13 @@
 }
 
 /* Logo */
-.logo h1 {
-  color: #5a2d2d;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1.8rem;
+.logo img {
+  height: 55px;   /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #e07b7b;
 }
 
 /* Desktop Menu */
@@ -57,6 +60,7 @@
   flex-direction: column;
   list-style: none;
   background-color: #fff;
+  align-items: center;
   position: absolute;
   width: 100%;
   top: 70px;
@@ -75,12 +79,15 @@
   font-weight: 500;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
+/* Responsive Navbar */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
   }
   .mobile-menu-icon {
     display: block;
+  }
+  .mobile-menu.active {
+    display: flex;
   }
 }

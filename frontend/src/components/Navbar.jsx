@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Menu, X, ShoppingCart, Search } from "lucide-react";
 import "./Navbar.css"; // create this CSS file for styling
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+
 
 
 
@@ -14,7 +16,11 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="logo">
-          <h1>Beauty Salon</h1>
+          <img 
+    src={logo} 
+    alt="Beauty Salon Logo" 
+    className="h-10 w-10 object-contain"
+  />
         </div>
 
         {/* Desktop Menu */}
