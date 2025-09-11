@@ -267,73 +267,77 @@ const BeautifulAboutUsPage = () => {
         </div>
       </div>
 
+      
       {/* Statistics Section */}
-      <div style={{
-        background: 'linear-gradient(135deg, #2c3e50, #34495e)',
-        padding: '6rem 2rem',
-        color: 'white',
-        position: 'relative',
-        overflow: 'hidden'
+<div style={{
+  background: 'linear-gradient(135deg, #2c3e50, #34495e)',
+  padding: '6rem 2rem',
+  color: 'white',
+  position: 'relative',
+  overflow: 'hidden'
+}}>
+  {/* Background Effects */}
+  <div style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(212,165,116,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(184,140,92,0.1) 0%, transparent 50%)',
+  }}></div>
+
+  {/* Grid Container */}
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+    gap: '2rem',
+    position: 'relative',
+    zIndex: 2
+  }}>
+    {stats.map((stat, index) => (
+      <div key={index} style={{
+        textAlign: 'center',
+        padding: '2rem 1rem',
+        background: 'rgba(255,255,255,0.1)',
+        borderRadius: '20px',
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(255,255,255,0.2)',
+        animation: `fadeInUp 1s ease-out ${index * 0.2}s both`
       }}>
         <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(212,165,116,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(184,140,92,0.1) 0%, transparent 50%)',
-        }}></div>
-        
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: `repeat(${window.innerWidth >= 768 ? 4 : 2}, 1fr)`,
-          gap: '3rem',
-          position: 'relative',
-          zIndex: 2
+          fontSize: '2.5rem',
+          marginBottom: '1rem',
+          animation: 'bounce 2s infinite'
         }}>
-          {stats.map((stat, index) => (
-            <div key={index} style={{
-              textAlign: 'center',
-              padding: '2rem',
-              background: 'rgba(255,255,255,0.1)',
-              borderRadius: '20px',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              animation: `fadeInUp 1s ease-out ${index * 0.2}s both`
-            }}>
-              <div style={{
-                fontSize: '3rem',
-                marginBottom: '1rem',
-                animation: 'bounce 2s infinite'
-              }}>
-                {stat.icon}
-              </div>
-              <h3 style={{
-                fontSize: '3rem',
-                fontWeight: 700,
-                margin: '1rem 0',
-                background: 'linear-gradient(45deg, #fff, #d4a574)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                {stat.number}
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                fontWeight: 300,
-                textTransform: 'uppercase',
-                letterSpacing: '1px',
-                opacity: 0.9
-              }}>
-                {stat.label}
-              </p>
-            </div>
-          ))}
+          {stat.icon}
         </div>
+        <h3 style={{
+          fontSize: '2rem',
+          fontWeight: 700,
+          margin: '1rem 0',
+          background: 'linear-gradient(45deg, #fff, #d4a574)',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent'
+        }}>
+          {stat.number}
+        </h3>
+        <p style={{
+          fontSize: '1rem',
+          fontWeight: 300,
+          textTransform: 'uppercase',
+          letterSpacing: '1px',
+          opacity: 0.9
+        }}>
+          {stat.label}
+        </p>
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Team Section */}
       <div style={{

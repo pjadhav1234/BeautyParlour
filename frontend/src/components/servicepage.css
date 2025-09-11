@@ -1,11 +1,21 @@
 /* ===============================
+   GLOBAL RESET & BASE
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===============================
    PARALLAX SECTIONS
 ================================= */
-*{
-    margin: 5px 5px;
-    padding: 10px 10px;
-    box-sizing: border-box;
-}
 
 /* Parallax Hero */
 .parallax-hero {
@@ -18,10 +28,10 @@
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: "Georgia", serif;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
   position: relative;
-  width: 100vw;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .parallax-hero::after {
@@ -31,13 +41,13 @@
   background: rgba(0, 0, 0, 0.45);
 }
 
-/* Text on Hero */
 .parallax-hero h1 {
   position: relative;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: bold;
   z-index: 1;
   animation: fadeInDown 1.5s ease;
+  max-width: 800px;
 }
 
 /* Parallax Divider */
@@ -52,11 +62,13 @@
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 2rem;
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
+  padding: 0 20px;
 }
 
 .parallax-divider::after {
@@ -73,24 +85,25 @@
 }
 
 /* ===============================
-   SERVICE CARDS
+   SERVICE SECTIONS
 ================================= */
-/* ===============================
-   SERVICE SECTIONS (Alternate Layout)
-================================= */
+
 .service-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin: 50px 0;
+  padding: 0 20px;
 }
 
 @media (min-width: 768px) {
   .service-block {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  /* Alternate rows reversed */
   .service-block:nth-child(even) {
     flex-direction: row-reverse;
   }
@@ -98,12 +111,11 @@
 
 /* Service Image */
 .service-block img {
-  flex: 1;                   /* allow it to take space */
-  width: 100%;               /* full width inside column */
-  max-width: 100%;          /* don't shrink too much */
-  height: auto;              /* keep proportions */
-  border-radius: 105px;
-  
+  flex: 1;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 25px;
   transition: transform 0.4s ease;
 }
 
@@ -112,9 +124,20 @@
 }
 
 /* Service Text */
+.service-block .service-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .service-block .service-text {
+    text-align: left;
+  }
+}
+
 .service-block h3 {
-  font-size: 2rem;
-  font-family: "Georgia", serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: #333;
   margin-bottom: 15px;
 }
@@ -130,7 +153,7 @@
   justify-content: space-between;
   padding: 8px 0;
   border-bottom: 1px dashed #ddd;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #444;
 }
 
@@ -157,3 +180,84 @@
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(180, 140, 90, 0.55);
 }
+
+/* ===============================
+   ANIMATIONS
+================================= */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===============================
+   EXTRA SMALL SCREENS (<400px)
+================================= */
+@media (max-width: 400px) {
+
+  /* Parallax Sections */
+  .parallax-hero {
+    height: 50vh;
+    padding: 0 10px;
+    background-attachment: scroll; 
+    width: 100%;/* fixed is buggy on mobile */
+  }
+
+  .parallax-hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .parallax-divider {
+    height: 200px;
+    padding: 0 10px;
+    font-size: 1rem;
+    background-attachment: scroll; /* improve mobile scroll performance */
+  }
+
+  /* Service Section */
+  .service-block {
+    gap: 1.2rem;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .service-block img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .service-block h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-block li {
+    font-size: 0.9rem;
+    padding: 6px 0;
+  }
+
+  .service-block button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+

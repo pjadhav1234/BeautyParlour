@@ -188,25 +188,29 @@ const EnhancedServicesPage = () => {
             Beauty & Elegance Redefined
           </p>
           <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '2rem',
-            fontSize: '1.1rem'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Star size={20} fill="currentColor" />
-              <span>5-Star Rated</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Heart size={20} fill="currentColor" />
-              <span>1000+ Happy Clients</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Sparkles size={20} />
-              <span>Premium Quality</span>
-            </div>
-          </div>
+  display: 'flex',
+  flexWrap: 'wrap',          // allow items to wrap
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '0rem',             // reduce gap on small screens
+  fontSize: '1.1rem',
+  padding: '0 10px',         // add horizontal padding for small screens
+  textAlign: 'center'
+}}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '0.1rem' }}>
+    <Star size={20} fill="currentColor" />
+    <span>5-Star Rated</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+    <Heart size={20} fill="currentColor" />
+    <span>1000+ Happy Clients</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+    <Sparkles size={20} />
+    <span>Premium Quality</span>
+  </div>
+</div>
+
         </div>
       </div>
 
@@ -291,7 +295,7 @@ const EnhancedServicesPage = () => {
         }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
+            
             gap: '2rem'
           }}>
             {filteredServices.map((service) => (
