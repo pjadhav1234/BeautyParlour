@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Gallery from './gallaery.jsx';
 
 
 const BeautifulAboutUsPage = () => {
@@ -337,7 +338,8 @@ const BeautifulAboutUsPage = () => {
     ))}
   </div>
 </div>
-
+ {/*gallaery section*/}
+      <Gallery/>
 
       {/* Team Section */}
       <div style={{
@@ -472,6 +474,8 @@ const BeautifulAboutUsPage = () => {
           ))}
         </div>
       </div>
+
+     
 
       {/* Values Section */}
       <div style={{
