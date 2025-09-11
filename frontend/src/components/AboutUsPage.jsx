@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Footer from './Footer';
+
 
 const BeautifulAboutUsPage = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -561,7 +561,7 @@ const BeautifulAboutUsPage = () => {
         </div>
       </div>
 
-      <Footer/>
+      
 
       <style>{`
         @keyframes fadeInUp {

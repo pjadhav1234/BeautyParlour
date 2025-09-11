@@ -19,13 +19,15 @@ function App() {
             <Hero />
             <Services />
             <Testimonials />
-            <Footer />
+            
           </>
         } />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
